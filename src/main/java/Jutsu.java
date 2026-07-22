@@ -1,19 +1,23 @@
+import java.util.logging.Logger;
+
 public class Jutsu {
     private int chakra;
     private int dano;
+
+    Logger  logger  = Logger.getLogger(getClass().getName());
 
     public Jutsu(int chakra, int dano) {
 
         if (chakra <= 5 && chakra >= 1) {
             this.chakra = chakra;
         } else {
-            System.out.println("Erro, chakra inválido.");
+            logger.warning("Erro, chakra inválido.");
         }
 
         if (dano <= 10 && dano >= 1) {
             this.dano = dano;
         } else {
-            System.out.println("Erro, dano inválido.");
+            logger.warning("Erro, dano inválido.");
         }
     }
 

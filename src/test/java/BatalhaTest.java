@@ -78,4 +78,14 @@ public class BatalhaTest {
 
         assertSame(primeiroNinja, vencedor);
     }
+
+    @Test
+    public void deveRetornarErroQuandoDanoForInvalido() {
+        int chakraValido = 3;
+        int danoInvalido = 15;
+
+        Jutsu jutsu = new Jutsu(chakraValido, danoInvalido);
+
+        assertEquals(0, jutsu.getDano());
+    }
 }
